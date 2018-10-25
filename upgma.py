@@ -1,5 +1,8 @@
+from matplotlib.pyplot import subplots
 from numpy import where
 from pandas import DataFrame, IndexSlice
+from scipy.cluster.hierarchy import average, dendrogram
+from scipy.spatial.distance import pdist
 from seaborn import light_palette
 
 
@@ -12,8 +15,14 @@ class UPGMA:
 
         1. upgma_records: Highlighted tables.
         2. phylogeny: Tree distance between clusters.
+        
+        For the final dendrogram, cluster labels are
+        the original index, while a condensed distance
+        matrix is required for scipy
         '''
-        self.upgma = upgma
+        self.upgma = upgma.copy()
+        self.cluster_labels = self.upgma.index
+        self.condensed_upgma = average(pdist(upgma.values))
         self.upgma_records, self.phylogeny = {}, {}
 
     def calc_most_related(self):
@@ -154,6 +163,29 @@ class UPGMA:
             self.restruct_upgma()
             self.upgma_merge_cluster()
 
+    def finalize_distances(self):
+        # 15. Remove condensed scaling
+        '''
+        The form of the condensed distance matrix is preserved,
+        but the scaling is unwanted and removed.
+        '''
+        self.condensed_upgma[:, 2] = list(upgma.phylogeny.values())
+
+    def plot_upgma(self):
+        # 16. Plot the dendrogram
+        '''
+        The final results are displayed here, using
+        the original index labels from the original
+        full distance matrix dataframe.
+        '''
+        fig, ax = subplots(figsize=(20, 20))
+        dendrogram(
+            self.condensed_upgma,
+            ax=ax,
+            orientation='right',
+            labels=self.cluster_labels)
+        fig.show()
+
 
 # 1. Initialize Dataframe.
 '''
@@ -172,5 +204,8 @@ cytochrome_c = DataFrame({
 },
                          index=("Turtle", "Man", "Tuna", "Chicken", "Moth",
                                 "Monkey", "Dog"))
+
 upgma = UPGMA(cytochrome_c)
 upgma.run_upgma()
+upgma.finalize_distances()
+upgma.plot_upgma()
