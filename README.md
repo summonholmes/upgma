@@ -12,9 +12,6 @@ In the context of this repository, UPGMA performs deterministically.  Therefore,
 ## Finish
 ![alt text](https://raw.githubusercontent.com/summonholmes/upgma/master/Finish.png)
 
-## Dendrogram
-![alt text](https://raw.githubusercontent.com/summonholmes/upgma/master/dendrogram.png)
-
 ## Results
 ```
 {('Man', 'Monkey'): 0.5,
@@ -24,6 +21,9 @@ In the context of this repository, UPGMA performs deterministically.  Therefore,
  ((('Turtle', 'Chicken'), (('Man', 'Monkey'), 'Dog')), 'Tuna'): 14.1875,
  (((('Turtle', 'Chicken'), (('Man', 'Monkey'), 'Dog')), 'Tuna'), 'Moth'): 18.21875}
 ```
+
+## Dendrogram
+![alt text](https://raw.githubusercontent.com/summonholmes/upgma/master/dendrogram.png)
 
 ## Dependencies
 * python3-matplotlib
