@@ -6,6 +6,22 @@ The Unweighted Pair Group Method with Arithmetic Mean (UPGMA) algorithm is a bot
 
 In the context of this repository, UPGMA performs deterministically.  Therefore, results will always be the same for every run.  In addition, as long as the data integrity is preseverd, the data may organized in any order and the results will still remain the same.
 
+## Start
+![alt text](https://raw.githubusercontent.com/summonholmes/upgma/master/Start.png)
+
+## Finish
+![alt text](https://raw.githubusercontent.com/summonholmes/upgma/master/Finish.png)
+
+## Results
+```
+{('Man', 'Monkey'): 0.5,
+ ('Turtle', 'Chicken'): 4.0,
+ (('Man', 'Monkey'), 'Dog'): 6.25,
+ (('Turtle', 'Chicken'), (('Man', 'Monkey'), 'Dog')): 7.875,
+ ((('Turtle', 'Chicken'), (('Man', 'Monkey'), 'Dog')), 'Tuna'): 14.1875,
+ (((('Turtle', 'Chicken'), (('Man', 'Monkey'), 'Dog')), 'Tuna'), 'Moth'): 18.21875}
+```
+
 ## Dependencies
 * python3-numpy
 * python3-pandas
