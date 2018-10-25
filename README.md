@@ -12,6 +12,9 @@ In the context of this repository, UPGMA performs deterministically.  Therefore,
 ## Finish
 ![alt text](https://raw.githubusercontent.com/summonholmes/upgma/master/Finish.png)
 
+## Dendrogram
+![alt text](https://raw.githubusercontent.com/summonholmes/upgma/master/dendrogram.png)
+
 ## Results
 ```
 {('Man', 'Monkey'): 0.5,
@@ -23,8 +26,10 @@ In the context of this repository, UPGMA performs deterministically.  Therefore,
 ```
 
 ## Dependencies
+* python3-matplotlib
 * python3-numpy
 * python3-pandas
+* python3-scipy
 * python3-seaborn
 
 ## Running the Code
