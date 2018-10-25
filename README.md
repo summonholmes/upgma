@@ -40,3 +40,11 @@ The phylogenetic distances may be viewed by running:
 ```
 upgma.phylogeny
 ```
+
+## Notes
+* The Pandas styler contains a bug that affects one of the intermediate steps of this program.
+When the index is [((('Turtle', 'Chicken'), (('Man', 'Monkey'), 'Dog')), 'Tuna')],
+the original dataframe cannot be proper stylized.
+```
+ValueError: Buffer has wrong number of dimensions (expected 1, got 3)
+```
