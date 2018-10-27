@@ -53,3 +53,4 @@ the original dataframe cannot be properly stylized.
 ```
 ValueError: Buffer has wrong number of dimensions (expected 1, got 3)
 ```
+* The example dendrogram provided in this README is incorrect.  The Scipy package is performing UPGMA dendrogram construction incorrectly by not clustering dog with man and monkey.  This is being addressed by migrating this repository away from Scipy.
