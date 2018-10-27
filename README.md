@@ -4,7 +4,7 @@ Demonstration of the UPGMA hierarchal clustering algorithm in Pandas, Seaborn, a
 ## Introduction
 The Unweighted Pair Group Method with Arithmetic Mean (UPGMA) algorithm is a bottom up agglomerative/hierarchical clustering algorithm commonly performed on genetic distance matrices.  Running the UPGMA algorithm generally allows for construction of a dendrogram.  The code in this repository utilizes Pandas and Seaborn for data visualization and vectorization capabilities.
 
-In the context of this repository, UPGMA performs deterministically.  Therefore, results will always be the same for every run.  In addition, as long as the data integrity is preseverd, the data may organized in any order and the results will still remain the same.
+In the context of this repository, UPGMA performs deterministically.  Therefore, results will always be the same for every run.  In addition, as long as the data integrity is preserved, the data may be organized in any order and the results will still remain the same.
 
 ## Start
 ![alt text](https://raw.githubusercontent.com/summonholmes/upgma/master/Start.png)
