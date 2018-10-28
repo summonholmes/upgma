@@ -26,7 +26,6 @@ In the context of this repository, UPGMA performs deterministically.  Therefore,
 ![alt text](https://raw.githubusercontent.com/summonholmes/upgma/master/dendrogram.png)
 
 ## Dependencies
-* python3-matplotlib
 * python3-numpy
 * python3-pandas
 * python3-scipy
