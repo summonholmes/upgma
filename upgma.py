@@ -2,7 +2,7 @@ from matplotlib.pyplot import subplots
 from numpy import where
 from pandas import DataFrame, IndexSlice
 from scipy.cluster.hierarchy import average, dendrogram
-from scipy.spatial.distance import pdist
+from scipy.spatial.distance import squareform
 from seaborn import light_palette
 
 
@@ -22,7 +22,7 @@ class UPGMA:
         '''
         self.upgma = upgma.copy()
         self.cluster_labels = self.upgma.index
-        self.condensed_upgma = average(pdist(upgma.values))
+        self.condensed_upgma = average(squareform(upgma.values))
         self.upgma_records, self.phylogeny = {}, {}
 
     def calc_most_related(self):
