@@ -193,18 +193,16 @@ The data shown below illustrates differences
 in amino acids for Cytochrome C between
 different animals.
 '''
-cytochrome_c = DataFrame({
+cytochrome_c = {
     "Turtle": (0, 19, 27, 8, 33, 18, 13),
     "Man": (19, 0, 31, 18, 36, 1, 13),
     "Tuna": (27, 31, 0, 26, 41, 32, 29),
     "Chicken": (8, 18, 26, 0, 31, 17, 14),
     "Moth": (33, 36, 41, 31, 0, 35, 28),
     "Monkey": (18, 1, 32, 17, 35, 0, 12),
-    "Dog": (13, 13, 29, 14, 28, 12, 0)
-},
-                         index=("Turtle", "Man", "Tuna", "Chicken", "Moth",
-                                "Monkey", "Dog"))
-
+    "Dog": (13, 13, 29, 14, 28, 12, 0),
+}
+cytochrome_c = DataFrame(cytochrome_c, index=cytochrome_c.keys())
 upgma = UPGMA(cytochrome_c)
 upgma.run_upgma()
 upgma.finalize_distances()
