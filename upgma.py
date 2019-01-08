@@ -169,7 +169,7 @@ class UPGMA:
         The form of the condensed distance matrix is preserved,
         but the scaling is unwanted and removed.
         '''
-        self.condensed_upgma[:, 2] = list(upgma.phylogeny.values())
+        self.condensed_upgma[:, 2] = list(self.phylogeny.values())
 
     def plot_upgma(self):
         # 16. Plot the dendrogram
