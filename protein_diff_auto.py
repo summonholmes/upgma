@@ -56,7 +56,7 @@ def update_dist_matrix(dist_matrix, pairwise_dict, start, counter, end):
     """
     for i, j in zip(range(len(Shh.keys()) - 1), range(1, len(Shh.keys()))):
         Shh_df.iloc[i, j:] = list(Shh_pairwise_diff.values())[start:end]
-        Shh_df.iloc[j:, i] = list(Shh_pairwise_diff.values())[start:end]
+        Shh_df.iloc[j:, i] = Shh_df.iloc[i, j:]
         start = end
         end += counter
         counter -= 1
