@@ -202,6 +202,7 @@ cytochrome_c = {
     "Monkey": (18, 1, 32, 17, 35, 0, 12),
     "Dog": (13, 13, 29, 14, 28, 12, 0),
 }
+
 cytochrome_c = DataFrame(cytochrome_c, index=cytochrome_c.keys())
 upgma = UPGMA(cytochrome_c)
 upgma.run_upgma()
