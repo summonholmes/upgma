@@ -4,8 +4,12 @@ from itertools import combinations
 """
 This is an automatic demonstration of how to construct a distance matrix.
 
-All sequences were retrieved from an ncbi protein search for
+All sequences were retrieved using an ncbi protein search for
 'sonic hedgehog'.
+
+
+NOTE: This only works for Python 3.6+, since dicts are now ordered by default
+using insertion order.
 """
 
 
@@ -50,7 +54,7 @@ def update_dist_matrix(dist_matrix, pairwise_dict, start, counter, end):
     Think of this as assigning lists, for each organism at right angles, where
     the vertex of the right angle is zero.
 
-    The start and end positions for the right angles are updated by 
+    The start and end positions for the right angles are updated by
     setting the start position to the end position, and by adding a
     decrementing counter value to the end value.
     """
