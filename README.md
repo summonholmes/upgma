@@ -55,3 +55,6 @@ See the created issue: https://github.com/pandas-dev/pandas/issues/24687
 ValueError: Buffer has wrong number of dimensions (expected 1, got 3)
 ```
 
+FIX: The tuples have been stringified to prevent this strange,
+unpredictable behavior.  However, this could represent greater
+problems in the pandas cython code base.
